@@ -17,22 +17,22 @@ public class Player {
 
 				if (Var.moveleft == true) {
 					if (Var.x >= 1) {
-						Var.x = Var.x - 2;
+						Var.x = Var.x - 1;
 					}
 				}
 				else if (Var.moveright == true) {
 					if (Var.x <= Var.screenwidth - 42) {
-						Var.x = Var.x + 2; 
+						Var.x = Var.x + 1; 
 					}
 				}
 				else if (Var.moveup == true) {
 					if (Var.y >=1) {
-						Var.y = Var.y - 2; 
+						Var.y = Var.y - 1; 
 					}
 				}
 				else if (Var.movedown == true) {
 					if (Var.y <= Var.screenheight - 66) {
-						Var.y = Var.y + 2; 
+						Var.y = Var.y + 1; 
 					}
 				}
 			}

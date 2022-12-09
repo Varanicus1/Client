@@ -13,31 +13,31 @@ public class MyClient {
 		new Gui();
 		new Var();
 		new Player();
-		Socket s = new Socket("localhost", 3333);
+		Socket s = new Socket("192.168.2.112", 3333);
 //"192.168.2.144"
 		DataOutputStream dout = new DataOutputStream(s.getOutputStream());
 
-		String strx = "", stry = "";
-		int varx=0,vary=0;
-		while (!strx.equals("stop")) {
+		String strclientx = "", strclienty = "";
+		int tmpclientx=0,tmpclienty=0;
+		while (!strclientx.equals("stop")) {
 			
-			strx = Integer.toString(Var.x);
-			strx = "x" + strx;
+			strclientx = Integer.toString(Var.x);
+			strclientx = "x" + strclientx;
 			
-			if(varx != Var.x) {
-				dout.writeUTF(strx);
+			if(tmpclientx != Var.x) {
+				dout.writeUTF(strclientx);
 				dout.flush();
 			}
-			varx=Var.x;
+			tmpclientx=Var.x;
 			
-			stry = Integer.toString(Var.y);
-			stry = "y" + stry;
+			strclienty = Integer.toString(Var.y);
+			strclienty = "y" + strclienty;
 			
-			if(vary != Var.y) {
-			dout.writeUTF(stry);
+			if(tmpclienty != Var.y) {
+			dout.writeUTF(strclienty);
 			dout.flush();
 			}
-			vary=Var.y;
+			tmpclienty=Var.y;
 		}
 
 		dout.close();
