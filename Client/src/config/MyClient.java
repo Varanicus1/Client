@@ -28,6 +28,21 @@ public class MyClient {
 		
 		while (!strclientx.equals("stop")) {
 			
+			//Input
+			strenemy = din.readUTF();
+			if (x == strenemy.charAt(0)) {
+				
+				strenemyx = strenemy.substring(1);
+				Var.enemyx=Integer.parseInt(strenemyx);
+				
+				System.out.println("X: " + strenemyx);
+			} else {
+				strenemyy = strenemy.substring(1);
+				Var.enemyy=Integer.parseInt(strenemyy);
+				System.out.println("Y: " + strenemyy);
+			}
+			
+			
 			//Output
 			strclientx = Integer.toString(Var.clientx);
 			strclientx = "x" + strclientx;
@@ -47,19 +62,6 @@ public class MyClient {
 			}
 			tmpclienty=Var.clienty;
 			
-			//Input
-			strenemy = din.readUTF();
-			if (x == strenemy.charAt(0)) {
-				
-				strenemyx = strenemy.substring(1);
-				Var.enemyx=Integer.parseInt(strenemyx);
-				
-				System.out.println("X: " + strenemyx);
-			} else {
-				strenemyy = strenemy.substring(1);
-				Var.enemyy=Integer.parseInt(strenemyy);
-				System.out.println("Y: " + strenemyy);
-			}
 			
 		}
 
