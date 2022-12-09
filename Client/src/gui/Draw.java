@@ -14,10 +14,10 @@ public class Draw extends JLabel{
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON ); 
 
         g.setColor(Color.RED);
-        g.fillRect(Var.x, Var.y, 25, 25); 
+        g.fillRect(Var.clientx, Var.clienty, 25, 25); 
         
         g.setColor(Color.BLACK);
-        g.fillRect(Var.vx,Var.vy,25,25);
+        g.fillRect(Var.enemyx,Var.enemyy,25,25);
 
         repaint();
 
