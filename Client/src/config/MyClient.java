@@ -61,8 +61,7 @@ public class MyClient {
 			dout.flush();
 			}
 			tmpclienty=Var.clienty;
-			
-			
+						
 		}
 
 		din.close();
